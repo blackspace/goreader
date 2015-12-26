@@ -15,5 +15,5 @@ Linux系统运行状态查询
 
 添加状态
 
-   编辑 goreader/internal/sys_info/sys_info_linux.go
+    编辑goreader/internal/sys_info/sys_info_linux.go
 
