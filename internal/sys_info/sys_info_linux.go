@@ -9,11 +9,11 @@ import (
 )
 
 func RegistHandlers() {
-	RegistHandler(Handler{"/uptime","uptime",uptime})
+	RegistAction(Action{"/uptime","uptime",uptime})
 
-	RegistHandler(Handler{"/version","version",version})
+	RegistAction(Action{"/version","version",version})
 
-	RegistHandler(Handler{"/now","now",now})
+	RegistAction(Action{"/now","now",now})
 }
 
 
@@ -33,4 +33,8 @@ func version() interface{} {
 
 func now() interface{} {
 	return time.Now().Unix()
+}
+
+func users() interface{} {
+
 }

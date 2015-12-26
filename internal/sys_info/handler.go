@@ -1,27 +1,27 @@
 package sys_info
 
-type Func func() interface{}
+type Handler func() interface{}
 
-type Handler struct {
-	Path string
-	Alias string
-	Func Func
+type Action struct {
+	Path    string
+	Alias   string
+	Handler Handler
 }
 
-var handler_set = make([]Handler,0,1<<8)
+var actions = make([]Action,0,1<<8)
 
-func GetHandlerSet() []Handler {
-	return handler_set
+func GetActions() []Action {
+	return actions
 }
 
-func RegistHandler(h Handler) {
-	handler_set =append(handler_set,h)
+func RegistAction(a Action) {
+	actions =append(actions, a)
 }
 
-func GetFunc(path string) Func {
-	for _,h :=range GetHandlerSet() {
-		if h.Alias==path || h.Path==path {
-			return h.Func
+func GetHandler(path string) Handler {
+	for _, a :=range GetActions() {
+		if a.Alias==path || a.Path==path {
+			return a.Handler
 		}
 	}
 

@@ -28,7 +28,7 @@ func getResultOut(paths []string) map[string]interface{} {
 
 	for _,p := range paths {
 		log.Print("Search the ",p)
-		f:=sys_info.GetFunc(p)
+		f:=sys_info.GetHandler(p)
 
 		if f!=nil {
 			v:=f()
