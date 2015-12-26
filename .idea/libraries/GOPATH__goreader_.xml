@@ -1,0 +1,62 @@
+<component name="libraryTable">
+  <library name="GOPATH &lt;goreader&gt;">
+    <CLASSES>
+      <root url="file://$USER_HOME$/golang/src/gopkg.in" />
+      <root url="file://$USER_HOME$/golang/src/github.com" />
+      <root url="file://$USER_HOME$/golang/src/launchpad.net" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <excluded>
+      <root url="file://$USER_HOME$/golang/src/github.com/cznic/strutil/.git" />
+      <root url="file://$USER_HOME$/golang/src/github.com/kr/pretty/.git" />
+      <root url="file://$USER_HOME$/golang/src/github.com/camlistore/lock/.git" />
+      <root url="file://$USER_HOME$/golang/src/github.com/maruel/subcommands/.git" />
+      <root url="file://$USER_HOME$/golang/src/github.com/cznic/ql/_testdata" />
+      <root url="file://$USER_HOME$/golang/src/github.com/spf13/cast/.git" />
+      <root url="file://$USER_HOME$/golang/src/github.com/nsf/gocode/_gccgo" />
+      <root url="file://$USER_HOME$/golang/src/github.com/cznic/fileutil/.git" />
+      <root url="file://$USER_HOME$/golang/src/github.com/magiconair/properties/_third_party" />
+      <root url="file://$USER_HOME$/golang/src/github.com/nsf/gocode/_goremote" />
+      <root url="file://$USER_HOME$/golang/src/github.com/magiconair/properties/.git" />
+      <root url="file://$USER_HOME$/golang/src/github.com/nsf/gocode/_testing" />
+      <root url="file://$USER_HOME$/golang/src/github.com/spf13/cobra/.git" />
+      <root url="file://$USER_HOME$/golang/src/github.com/rakyll/command/.git" />
+      <root url="file://$USER_HOME$/golang/src/github.com/texttheater/golang-levenshtein/.git" />
+      <root url="file://$USER_HOME$/golang/src/github.com/timtadh/getopt/.git" />
+      <root url="file://$USER_HOME$/golang/src/github.com/inconshreveable/mousetrap/.git" />
+      <root url="file://$USER_HOME$/golang/src/github.com/cznic/ql/.git" />
+      <root url="file://$USER_HOME$/golang/src/github.com/nsf/gocode/.git" />
+      <root url="file://$USER_HOME$/golang/src/github.com/cpuguy83/go-md2man/.git" />
+      <root url="file://$USER_HOME$/golang/src/launchpad.net/gorun/.bzr" />
+      <root url="file://$USER_HOME$/golang/src/gopkg.in/yaml.v2/.git" />
+      <root url="file://$USER_HOME$/golang/src/github.com/cznic/exp/.git" />
+      <root url="file://$USER_HOME$/golang/src/github.com/russross/blackfriday/testdata" />
+      <root url="file://$USER_HOME$/golang/src/github.com/russross/blackfriday/.git" />
+      <root url="file://$USER_HOME$/golang/src/github.com/cznic/mathutil/.git" />
+      <root url="file://$USER_HOME$/golang/src/github.com/shurcooL/sanitized_anchor_name/.git" />
+      <root url="file://$USER_HOME$/golang/src/github.com/spf13/pflag/.git" />
+      <root url="file://$USER_HOME$/golang/src/github.com/gaal/go-options/.git" />
+      <root url="file://$USER_HOME$/golang/src/gopkg.in/fsnotify.v1/.git" />
+      <root url="file://$USER_HOME$/golang/src/github.com/mitchellh/mapstructure/.git" />
+      <root url="file://$USER_HOME$/golang/src/github.com/cznic/exp/lldb/testdata" />
+      <root url="file://$PROJECT_DIR$" />
+      <root url="file://$USER_HOME$/golang/src/github.com/spf13/viper/.git" />
+      <root url="file://$USER_HOME$/golang/src/github.com/zhgo/config/.git" />
+      <root url="file://$USER_HOME$/golang/src/github.com/cznic/sortutil/.git" />
+      <root url="file://$USER_HOME$/golang/src/github.com/spf13/jwalterweatherman/.git" />
+      <root url="file://$USER_HOME$/golang/src/github.com/BurntSushi/toml/_examples" />
+      <root url="file://$USER_HOME$/golang/src/github.com/cznic/bufs/.git" />
+      <root url="file://$USER_HOME$/golang/src/github.com/BurntSushi/toml/.git" />
+      <root url="file://$USER_HOME$/golang/src/github.com/zhgo/console/.git" />
+      <root url="file://$USER_HOME$/golang/src/github.com/fd/options/.git" />
+      <root url="file://$USER_HOME$/golang/src/github.com/liudng/dogo/.git" />
+      <root url="file://$USER_HOME$/golang/src/github.com/mattn/go-sqlite3/_example" />
+      <root url="file://$USER_HOME$/golang/src/github.com/sevlyar/go-daemon/.git" />
+      <root url="file://$USER_HOME$/golang/src/github.com/kr/text/.git" />
+      <root url="file://$USER_HOME$/golang/src/github.com/cznic/zappy/.git" />
+      <root url="file://$USER_HOME$/golang/src/github.com/cznic/b/.git" />
+      <root url="file://$USER_HOME$/golang/src/github.com/mattn/go-sqlite3/.git" />
+    </excluded>
+  </library>
+</component>
