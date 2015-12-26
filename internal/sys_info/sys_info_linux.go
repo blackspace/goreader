@@ -36,5 +36,5 @@ func now() interface{} {
 }
 
 func users() interface{} {
-
+	return nil
 }

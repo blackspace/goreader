@@ -1,6 +1,6 @@
 # goreader
 
-The project is for querying a running status of linux system
+The project is for querying the running status of linux system
 
 Usage
 ----------------
