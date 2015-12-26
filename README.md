@@ -1,6 +1,6 @@
 # goreader
 
-The project is for query a running status of linux system
+The project is for querying a running status of linux system
 
 Usage
 ----------------
@@ -14,7 +14,7 @@ Query the status by the curl
     curl -k -d '["version","uptime","now"]' https://127.0.0.1:10443
 
 
-If you want to add new status,please the file:
+If you want to add new status,please edit the file:
 
     goreader/internal/sys_info/sys_info_linux.go
 
