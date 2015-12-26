@@ -1,19 +1,20 @@
 # goreader
 
-Linux系统运行状态查询
+The project is for query a running status of linux system
 
-使用
+Usage
 ----------------
 
-启动服务器
+Start the goreader server
 
     goreader server
 
-查询
+Query the status by the curl
 
     curl -k -d '["version","uptime","now"]' https://127.0.0.1:10443
 
-添加状态
 
-    编辑goreader/internal/sys_info/sys_info_linux.go
+If you want to add new status,please the file:
+
+    goreader/internal/sys_info/sys_info_linux.go
 
