@@ -1,6 +1,7 @@
 # goreader
 
-The project is for querying the running status of linux system
+The project is for querying the running status of linux system by the https connecting.
+And the client gets the data in the json format.
 
 Usage
 ----------------
