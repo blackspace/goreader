@@ -6,6 +6,8 @@ import (
 	. "goreader/internal/goreader_daemon/compile"
 	. "goreader/internal/goreader_daemon/pipe"
 	"io"
+	"os"
+	. "strconv"
 )
 
 func list_handler(w http.ResponseWriter,r *http.Request){
@@ -44,4 +46,16 @@ func root_handler(w http.ResponseWriter,r *http.Request)  {
 func LoadHttpsHandlers() {
 	http.HandleFunc("/list",list_handler)
 	http.HandleFunc("/", root_handler)
+}
+
+func Listen(port int) {
+	log.Print("Be listening on 10443.Go to https://127.0.0.1:",port)
+
+	os.Chdir(os.Getenv("HOME"))
+
+	err := http.ListenAndServeTLS(":"+Itoa(port), ".goreader/cert.pem", ".goreader/key.pem",nil)
+
+	if err!=nil {
+		log.Fatal(err)
+	}
 }

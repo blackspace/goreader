@@ -1,4 +1,5 @@
 package subcommands
+
 import (
 	"flag"
 	"fmt"

@@ -1,11 +1,7 @@
 package subcommands
 import (
 	"goreader/network"
-	"log"
-	"os"
-	"net/http"
 	"flag"
-	. "strconv"
 )
 
 type ServerCommand struct {
@@ -20,13 +16,5 @@ func (cmd *ServerCommand) Flags(fs *flag.FlagSet) *flag.FlagSet {
 func (cmd *ServerCommand) Run(args []string) {
 	network.LoadHttpsHandlers()
 
-	log.Print("Be listening on 10443.Go to https://127.0.0.1:",*cmd.flagPort)
-
-	os.Chdir(os.Getenv("HOME"))
-
-	err := http.ListenAndServeTLS(":"+Itoa(*cmd.flagPort), ".goreader/server.crt", ".goreader/server.key",nil)
-
-	if err!=nil {
-		log.Fatal(err)
-	}
+	network.Listen(*cmd.flagPort)
 }
