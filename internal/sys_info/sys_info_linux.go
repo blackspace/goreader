@@ -11,10 +11,6 @@ import (
 func RegistHandlers() {
 	RegistHandler(Handler{"/uptime","uptime",uptime})
 
-	RegistHandler(Handler{"/cpu","cpu",func() interface{} {
-		return 12.3
-	}})
-
 	RegistHandler(Handler{"/version","version",version})
 
 	RegistHandler(Handler{"/now","now",now})

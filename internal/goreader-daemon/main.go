@@ -9,6 +9,10 @@ import (
 )
 
 func main() {
+	json.NewEncoder(os.Stdout).Encode(getResultOut(getInputPaths()))
+}
+
+func getInputPaths() []string {
 	var paths []string
 
 	if err:=json.NewDecoder(os.Stdin).Decode(&paths);err==io.EOF {
@@ -16,12 +20,10 @@ func main() {
 		log.Fatal(err)
 	}
 
-	result := getKVsByPaths(paths)
-
-	json.NewEncoder(os.Stdout).Encode(result)
+	return paths
 }
 
-func getKVsByPaths(paths []string) map[string]interface{} {
+func getResultOut(paths []string) map[string]interface{} {
 	result :=make(map[string]interface{})
 
 	for _,p := range paths {
