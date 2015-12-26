@@ -7,6 +7,7 @@ Usage
 
 Start the goreader server
 
+    goreader install 
     goreader server
 
 Query the status by the curl

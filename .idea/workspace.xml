@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5fa519c1-291f-4d03-a0dd-716fe153ea6d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/subcommands/install.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/network/https.go" afterPath="$PROJECT_DIR$/network/https.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/subcommands/server.go" afterPath="$PROJECT_DIR$/subcommands/server.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/subcommands/subcommands.go" afterPath="$PROJECT_DIR$/subcommands/subcommands.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/subcommands/version.go" afterPath="$PROJECT_DIR$/subcommands/version.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="goreader.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,14 +27,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="https.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="https.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/network/https.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.74069625">
+            <state vertical-scroll-proportion="0.0">
               <caret line="55" column="74" selection-start-line="55" selection-start-column="74" selection-end-line="55" selection-end-column="74" />
               <folding>
                 <element signature="e#17#162#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.20199502">
+              <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -150,7 +155,6 @@
         <option value="$PROJECT_DIR$/internal/sys_info/sys_info_windows.go" />
         <option value="$PROJECT_DIR$/internal/sys_info/sys_info.go" />
         <option value="$PROJECT_DIR$/internal/sys_info/handler.go" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/https.go" />
         <option value="$PROJECT_DIR$/daemon/daemon.go" />
         <option value="$PROJECT_DIR$/internal/sys_info/sys_info_linux.go" />
@@ -169,6 +173,7 @@
         <option value="$PROJECT_DIR$/subcommands/install.go" />
         <option value="$PROJECT_DIR$/subcommands/server.go" />
         <option value="$PROJECT_DIR$/network/https.go" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -1026,13 +1031,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.043165468">
-          <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.go">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2589928">
@@ -1109,11 +1107,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/network/https.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.74069625">
+        <state vertical-scroll-proportion="0.0">
           <caret line="55" column="74" selection-start-line="55" selection-start-column="74" selection-end-line="55" selection-end-column="74" />
           <folding>
             <element signature="e#17#162#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20199502">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
