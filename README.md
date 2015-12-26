@@ -5,9 +5,12 @@ The project is for querying the running status of linux system
 Usage
 ----------------
 
+Install the key.gem and cert.gem files in the ~/.goreader directory for the https server
+
+    goreader install
+
 Start the goreader server
 
-    goreader install 
     goreader server
 
 Query the status by the curl
