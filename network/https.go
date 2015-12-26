@@ -3,7 +3,8 @@ package network
 import (
 	"net/http"
 	"log"
-	"goreader/daemon"
+	. "goreader/internal/goreader_daemon/compile"
+	. "goreader/internal/goreader_daemon/pipe"
 	"io"
 )
 
@@ -16,7 +17,7 @@ func root_handler(w http.ResponseWriter,r *http.Request)  {
 
 	w.Header().Set("Content-Type","Content-Type: text/plain; charset=utf-8")
 
-	if err := daemon.CompileDaemon(); err!=nil {
+	if err := CompileDaemon(); err!=nil {
 		w.Write([]byte(err.Error()))
 		return
 	}
@@ -35,12 +36,12 @@ func root_handler(w http.ResponseWriter,r *http.Request)  {
 		}
 	}
 
-	response := daemon.DealIt(content)
+	response := DealIt(content)
 
 	w.Write(response)
 }
 
-func InitHttpsHandlers() {
+func LoadHttpsHandlers() {
 	http.HandleFunc("/list",list_handler)
 	http.HandleFunc("/", root_handler)
 }

@@ -1,31 +1,11 @@
-package daemon
+package pipe
 
 import (
-	"bytes"
 	"os/exec"
 	"log"
-	"errors"
+	"bytes"
 	"strings"
 )
-
-
-func CompileDaemon() error {
-	var err_buf bytes.Buffer
-	cmd := exec.Command("go","install","goreader/internal/goreader-daemon")
-	cmd.Stderr=&err_buf
-
-	if err := cmd.Run();err != nil {
-		log.Print(err)
-		log.Print(err_buf.String())
-
-		return errors.New("Compiling the daemon is wrong")
-
-	} else {
-		log.Println("It has maked a new goreader-daemon")
-		return nil
-	}
-}
-
 
 func DealIt(input []byte) (output []byte) {
 	log.Print("The requst is ",string(input))
@@ -34,7 +14,7 @@ func DealIt(input []byte) (output []byte) {
 	var out_buf=new(bytes.Buffer)
 	var err_buf=new(bytes.Buffer)
 
-	cmd := exec.Command("goreader-daemon")
+	cmd := exec.Command("goreader_daemon")
 	cmd.Stdin = input_buf
 	cmd.Stdout = out_buf
 	cmd.Stderr = err_buf

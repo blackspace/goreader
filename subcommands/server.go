@@ -1,24 +1,12 @@
-package subcommand
+package subcommands
 import (
-	"flag"
-	"fmt"
 	"goreader/network"
 	"log"
 	"os"
 	"net/http"
+	"flag"
 	. "strconv"
 )
-
-type VersionCommand struct{
-}
-
-func (cmd *VersionCommand) Flags(fs *flag.FlagSet) *flag.FlagSet {
-	return fs
-}
-
-func (cmd *VersionCommand) Run(args []string) {
-	fmt.Println("Now it is in the developping")
-}
 
 type ServerCommand struct {
 	flagPort *int
@@ -30,8 +18,7 @@ func (cmd *ServerCommand) Flags(fs *flag.FlagSet) *flag.FlagSet {
 }
 
 func (cmd *ServerCommand) Run(args []string) {
-
-	network.InitHttpsHandlers()
+	network.LoadHttpsHandlers()
 
 	log.Print("Be listening on 10443.Go to https://127.0.0.1:",*cmd.flagPort)
 

@@ -2,15 +2,11 @@ package main
 
 import (
 	"github.com/rakyll/command"
-	. "goreader/subcommand"
+	"goreader/subcommands"
 )
 
-
-
-
 func main() {
-	command.On("version", "prints the version", &VersionCommand{}, nil)
-	command.On("server", "start the server for listenning", &ServerCommand{}, nil)
+	subcommands.LoadSubcommand()
 	command.Parse()
 	command.Run()
 }
