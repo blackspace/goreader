@@ -5,13 +5,8 @@ import (
 	"io"
 	"encoding/json"
 	"log"
-	. "goreader/internal/handler"
-	. "goreader/internal/sys_info"
+	"goreader/internal/sys_info"
 )
-
-func init() {
-	RegistHandlers()
-}
 
 func main() {
 	var paths []string
@@ -26,29 +21,18 @@ func main() {
 	json.NewEncoder(os.Stdout).Encode(result)
 }
 
-
-func RegistHandlers() {
-	RegistHandler(Handler{"/uptime","uptime",func() interface{} {
-		return Uptime()
-	}})
-
-	RegistHandler(Handler{"/cpu","cpu",func() interface{} {
-		return 12.3
-	}})
-}
-
-
 func getKVsByPaths(paths []string) map[string]interface{} {
 	result :=make(map[string]interface{})
 
 	for _,p := range paths {
-		 for _,h :=range GetHandlerSet() {
-			 if h.Alias==p || h.Path==p {
-				 v := h.Func()
+		log.Print("Search the ",p)
+		f:=sys_info.GetFunc(p)
 
-				result[p]=v
-			 }
-		 }
+		if f!=nil {
+			v:=f()
+			log.Print("Get the handler func")
+			result[p]=v
+		}
 	}
 
 	return result
