@@ -16,8 +16,13 @@ Start the goreader server
 
 Query the status by the curl
 
-    curl -k -d '["version","uptime","now"]' https://127.0.0.1:10443
+    $ curl -k -d '["actions"]' https://127.0.0.1:10443
 
+    {"actions":[{"Path":"/uptime","Alias":"uptime","Descript":"the uptime"},{"Path":"/version","Alias":"version","Descript":"the version"},{"Path":"/now","Alias":"now","Descript":"the now"},{"Path":"/actions","Alias":"actions","Descript":"Get all status actionses"}]}
+
+    $ curl -k -d '["uptime","now"]' https://127.0.0.1:10443
+
+    {"now":1451206955,"uptime":3501.67}
 
 If you want to add new status,please edit the file:
 
