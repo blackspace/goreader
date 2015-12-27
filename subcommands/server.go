@@ -15,6 +15,5 @@ func (cmd *ServerCommand) Flags(fs *flag.FlagSet) *flag.FlagSet {
 
 func (cmd *ServerCommand) Run(args []string) {
 	network.LoadHttpsHandlers()
-
 	network.Listen(*cmd.flagPort)
 }

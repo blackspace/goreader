@@ -34,7 +34,7 @@ func root_handler(w http.ResponseWriter,r *http.Request)  {
 		}
 	}
 
-	response := DealIt(content)
+	response := DealItByDaemon(content)
 
 	w.Write(response)
 }

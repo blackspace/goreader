@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-func DealIt(input []byte) (output []byte) {
+func DealItByDaemon(input []byte) (output []byte) {
 	log.Print("The requst is ",string(input))
 
 	var input_buf=bytes.NewBuffer(input)
