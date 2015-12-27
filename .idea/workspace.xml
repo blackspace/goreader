@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5fa519c1-291f-4d03-a0dd-716fe153ea6d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/network/https.go" afterPath="$PROJECT_DIR$/network/https.go" />
     </list>
     <ignored path="goreader.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
+      <file leaf-file-name="https.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/network/https.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.56109726">
-              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.7346939">
+              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -81,10 +81,10 @@
         <option value="$PROJECT_DIR$/subcommands/subcommands.go" />
         <option value="$PROJECT_DIR$/subcommands/install.go" />
         <option value="$PROJECT_DIR$/subcommands/server.go" />
-        <option value="$PROJECT_DIR$/network/https.go" />
         <option value="$PROJECT_DIR$/internal/sys_info/sys_info_linux.go" />
         <option value="$PROJECT_DIR$/internal/sys_info/action.go" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/network/https.go" />
       </list>
     </option>
   </component>
@@ -966,18 +966,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/network/https.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0156063">
-          <caret line="55" column="74" selection-start-line="55" selection-start-column="74" selection-end-line="55" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.56109726">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/https.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7346939">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding />
         </state>
       </provider>

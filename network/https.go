@@ -10,10 +10,6 @@ import (
 	. "strconv"
 )
 
-func list_handler(w http.ResponseWriter,r *http.Request){
-
-}
-
 func root_handler(w http.ResponseWriter,r *http.Request)  {
 	log.Println("It is a request be coming in")
 
@@ -44,7 +40,6 @@ func root_handler(w http.ResponseWriter,r *http.Request)  {
 }
 
 func LoadHttpsHandlers() {
-	http.HandleFunc("/list",list_handler)
 	http.HandleFunc("/", root_handler)
 }
 
