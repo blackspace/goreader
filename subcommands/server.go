@@ -1,6 +1,6 @@
 package subcommands
 import (
-	"goreader/network"
+	"github.com/blackspace/goreader/network"
 	"flag"
 )
 

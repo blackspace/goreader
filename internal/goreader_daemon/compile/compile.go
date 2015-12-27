@@ -10,7 +10,7 @@ import (
 
 func CompileDaemon() error {
 	var err_buf bytes.Buffer
-	cmd := exec.Command("go","install","goreader/internal/goreader_daemon")
+	cmd := exec.Command("go","install","github.com/blackspace/goreader/internal/goreader_daemon")
 	cmd.Stderr=&err_buf
 
 	if err := cmd.Run();err != nil {

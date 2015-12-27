@@ -5,7 +5,7 @@ import (
 	"io"
 	"encoding/json"
 	"log"
-	"goreader/internal/sys_info"
+	"github.com/blackspace/goreader/internal/sys_info"
 )
 
 func main() {

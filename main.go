@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/rakyll/command"
-	"goreader/subcommands"
+	"github.com/blackspace/goreader/subcommands"
 )
 
 func main() {

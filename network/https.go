@@ -3,8 +3,8 @@ package network
 import (
 	"net/http"
 	"log"
-	. "goreader/internal/goreader_daemon/compile"
-	. "goreader/internal/goreader_daemon/pipe"
+	. "github.com/blackspace/goreader/internal/goreader_daemon/compile"
+	. "github.com/blackspace/goreader/internal/goreader_daemon/pipe"
 	"io"
 	"os"
 	. "strconv"
