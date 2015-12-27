@@ -5,6 +5,9 @@ And the client gets the data in the json format.
 
 Usage
 ----------------
+First as other golang project at the github site
+
+    go get github.com/blackspace/goreader
 
 Install the key.gem and cert.gem files in the ~/.goreader directory for the https server
 
