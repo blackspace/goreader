@@ -9,11 +9,11 @@ import (
 )
 
 func RegistHandlers() {
-	RegistAction(Action{"/uptime","uptime",uptime})
+	RegistAction(Action{"/uptime","uptime",uptime,"the uptime"})
 
-	RegistAction(Action{"/version","version",version})
+	RegistAction(Action{"/version","version",version,"the version"})
 
-	RegistAction(Action{"/now","now",now})
+	RegistAction(Action{"/now","now",now,"the now"})
 }
 
 
