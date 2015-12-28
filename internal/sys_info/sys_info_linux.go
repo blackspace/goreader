@@ -10,6 +10,7 @@ import (
 	"bufio"
 	"log"
 	"io"
+	"regexp"
 )
 
 func RegistHandlers() {
@@ -22,6 +23,8 @@ func RegistHandlers() {
 	RegistAction(Action{"/users","users",users,"The users of system"})
 
 	RegistAction(Action{"/memory","memory",memory,"The memory information of system,its unit is K"})
+
+	RegistAction(Action{"/disk","disk",disk,"The disk information of system,its unit is block"})
 }
 
 
@@ -88,4 +91,38 @@ func memory() interface{} {
 	}
 
 	return result
+}
+
+func disk() interface{} {
+	result :=make(map[string]int)
+
+	if f,err:=os.Open("/proc/partitions");err!=nil {
+		log.Fatal("Failing to open /proc/partitions")
+	} else {
+		r:=bufio.NewReader(f)
+
+		r.ReadLine()
+		r.ReadLine()
+
+		for {
+			l,_,err:=r.ReadLine()
+
+			if err==io.EOF {
+				break
+			}
+
+			s,_:=regexp.Compile(`\s+`)
+
+			fragment := s.Split(string(l),-1)
+
+			k:=fragment[4]
+			v,_:=Atoi(fragment[3])
+
+
+			result[k]=v
+		}
+	}
+
+	return result
+
 }
