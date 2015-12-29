@@ -1,6 +1,6 @@
 package sys_info
 
-type Handler func() interface{}
+type Handler func(params ...string) interface{}
 
 type Action struct {
 	Path    string
@@ -24,16 +24,16 @@ func RegistAction(a Action) {
 }
 
 func GetHandler(path string) Handler {
-	for _, a :=range GetActions() {
-		if a.Alias==path || a.Path==path {
-			return a.Handler
+		for _, a :=range GetActions() {
+			if a.Alias==path || a.Path==path {
+				return a.Handler
+			}
 		}
-	}
 
 	return nil
 }
 
-func Actions() interface{} {
+func Actions(params ...string) interface{} {
 	result :=make([]interface{},0,1<<8)
 	for _,a:=range actions {
 		result=append(result, struct{Path string;Alias string;Descript string}{a.Path,a.Alias,a.Descript})

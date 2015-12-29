@@ -11,6 +11,7 @@ import (
 	"log"
 	"io"
 	"regexp"
+	"syscall"
 )
 
 func RegistHandlers() {
@@ -24,11 +25,17 @@ func RegistHandlers() {
 
 	RegistAction(Action{"/memory","memory",memory,"The memory information of system,its unit is K"})
 
-	RegistAction(Action{"/disk","disk",disk,"The disk information of system,its unit is block"})
+	RegistAction(Action{"/disks","disks", disks,"The disk information of system,its unit is block"})
+
+	RegistAction(Action{"/pagesize","pagesize",pagesize,"the size of page of memory"})
+
 }
 
+func pagesize(param ...string) interface{} {
+	return syscall.Getpagesize()
+}
 
-func uptime() interface{} {
+func uptime(params ...string) interface{} {
 	bs,_:=ioutil.ReadFile("/proc/uptime")
 
 	f,_:=ParseFloat(strings.Split(string(bs)," ")[0],64)
@@ -36,16 +43,16 @@ func uptime() interface{} {
 	return f
 }
 
-func version() interface{} {
+func version(params ...string) interface{} {
 	v,_:=ioutil.ReadFile("/proc/version")
 	return string(v)
 }
 
-func now() interface{} {
+func now(params ...string) interface{} {
 	return time.Now().Unix()
 }
 
-func users() interface{} {
+func users(params ...string) interface{} {
 	result := make([]string,0,1<<8)
 
 	if f,err:=os.Open("/etc/passwd"); err!=nil {
@@ -66,7 +73,7 @@ func users() interface{} {
 	return result
 }
 
-func memory() interface{} {
+func memory(params ...string) interface{} {
 	result := make(map[string]int)
 
 	if f,err:=os.Open("/proc/meminfo");err!=nil {
@@ -93,33 +100,34 @@ func memory() interface{} {
 	return result
 }
 
-func disk() interface{} {
-	result :=make(map[string]int)
+func disks(params ...string) interface{} {
 
-	if f,err:=os.Open("/proc/partitions");err!=nil {
+	result := make(map[string]interface{})
+
+	if f, err := os.Open("/proc/partitions"); err != nil {
 		log.Fatal("Failing to open /proc/partitions")
 	} else {
-		r:=bufio.NewReader(f)
+		r := bufio.NewReader(f)
 
 		r.ReadLine()
 		r.ReadLine()
 
 		for {
-			l,_,err:=r.ReadLine()
+			l, _, err := r.ReadLine()
 
-			if err==io.EOF {
+			if err == io.EOF {
 				break
 			}
 
-			s,_:=regexp.Compile(`\s+`)
+			s, _ := regexp.Compile(`\s+`)
 
-			fragment := s.Split(string(l),-1)
+			fragment := s.Split(string(l), -1)
 
-			k:=fragment[4]
-			v,_:=Atoi(fragment[3])
+			k := fragment[4]
+			v, _ := Atoi(fragment[3])
 
 
-			result[k]=v
+			result[k] = v
 		}
 	}
 
